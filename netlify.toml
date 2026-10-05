@@ -1,0 +1,10 @@
+[build]
+  base    = "web"
+  command = "npm run build"
+  publish = "dist"
+
+# SPA: every path serves index.html (harmless here, future-proof if routing lands)
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
